@@ -1,5 +1,7 @@
 # BruvacAI
 
+*Built with Llama.*
+
 A LoRA fine-tuned LLM that generates Magic: The Gathering flavor text from card data — built on Llama-3.2-1B-Instruct and trained on 23K+ cards via Scryfall. BruvacAI learns the genre's distinctive voice — terse, evocative prose and quotes drawn from Magic's worldbuilding — and generates new flavor text. Named after Bruvac, the Grandiloquent — a fitting namesake for a model whose whole job is producing grandiloquent prose.
 
 🤗 **Model:** [Gbeckler/bruvac-ai](https://huggingface.co/Gbeckler/bruvac-ai)
@@ -68,6 +70,7 @@ Trained for 3 epochs; validation loss was lowest after epoch 1 and increased in 
   ├── BruvacAI_full_loop_v1.ipynb   — full data pipeline + training + evaluation
 app.py                                — Gradio app (deployed to Hugging Face Spaces)
 requirements.txt
+LICENSE-LLAMA.txt                     — Llama 3.2 Community License (required redistribution notice)
 README.md
 ```
 
@@ -88,7 +91,7 @@ See `BruvacAI_inference.ipynb` for a full working example, or try the [live demo
 
 ## Challenges encountered
 
-Most of the friction in this project came from library version drift and infrastructure quirks rather than modeling decisions. However, they are nevertheless important to note to remember for fine-tuning work in the future. 
+Most of the friction in this project came from library version drift and infrastructure quirks rather than modeling decisions. However, they are nevertheless important to note to remember for fine-tuning work in the future.
 
 - **Gradient checkpointing incompatibility**: `use_gradient_checkpointing` (both Unsloth's and PyTorch's native modes) conflicted with Unsloth's fused chunked cross-entropy loss, which uses `torch.func.grad_and_value` — a documented PyTorch limitation where saved-tensor hooks aren't supported inside `torch.func` transforms. Resolved by disabling checkpointing and compensating with a smaller batch size + higher gradient accumulation.
 - **Packing-induced slowdown**: Enabling `packing=True` caused a ~10x throughput drop (0.07 it/s with 100% GPU utilization). Likely, this was due to kernel recompilation from inconsistent packed-batch shapes. Disabling packing brought throughput back to ~0.73 it/s.
@@ -111,11 +114,19 @@ Most of the friction in this project came from library version drift and infrast
 - **Power/toughness conditioning**: will be part of the system prompt in v2
 - **Few-shot learning**: providing direct samples in the system prompt could improve model accuracy due to in-context learning principles
 
+---
 
+## License & Attribution
+
+This model is a fine-tuned derivative of [Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct) and is distributed under the terms of the [Llama 3.2 Community License Agreement](https://www.llama.com/llama3_2/license/). A copy of that license is included in this repository as `LICENSE-LLAMA.txt`.
+
+> Llama 3.2 is licensed under the Llama 3.2 Community License, Copyright © Meta Platforms, Inc. All Rights Reserved.
+
+Code in this repository (data pipeline, training scripts, Gradio app) is original work by the author and is provided as-is for portfolio/educational purposes.
 
 ## Acknowledgments
 
 - Card data: [Scryfall](https://scryfall.com)
-- Fine-tuning framework: [Unsloth](https://github.com/unslothai/unsloth)
-- Base model: [Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct) (Meta)
-- My brother: For inspiring in me the passion for Magic: The Gathering and similar card games
+- Fine-tuning framework: [Unsloth](https://github.com/unslothai/unsloth) (Apache 2.0)
+- Base model: [Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct) (Meta) — Built with Llama
+- My brother: for inspiring in me the passion for Magic: The Gathering and similar card games
