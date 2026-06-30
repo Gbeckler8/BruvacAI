@@ -19,7 +19,7 @@ Give Llama-BruvacAI a card name, mana cost, type line, and (optionally) rules te
 Generated on held-out validation cards.
 
 ### Sinew Sliver
-**Generated:** With the rise of Phyrexia, many Eldrazi, including the Slivers, became agents of change, seeking to preserve their homeworlds.
+**Generated:** With the rise of Phyrexia, many Eldrazi, including the Slivers, became agents of change, seeking to preserve their homeworlds.\
 **Actual:** As the muscle cords of the creature twitched, Hanna saw an unsettling unanimity in the others' rippling flesh. She didn't know what it meant, but she urged Sisay to keep the ship at a safe distance.
 
 
