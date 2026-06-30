@@ -24,12 +24,12 @@ Generated on held-out validation cards.
 
 
 ### Tolarian Scholar
-**Generated:** "Every book is a door to a greater library."
+**Generated:** "Every book is a door to a greater library."\
 **Actual:** The Tolarian Academies embrace a tradition of study and research while discouraging the kinds of experiments that ruined the original island of Tolaria.
 
 
 ### Dissipate
-**Generated:** "Magic is a waste of time." —Elspeth
+**Generated:** "Magic is a waste of time." —Elspeth\
 **Actual:** "If you weren't born with it, you don't need it." —Grahilah, former trader of Amiqat
 
 *(More examples in the [training notebook](./BruvacAI_full_loop_v1.ipynb) and live in the [demo](https://huggingface.co/spaces/Gbeckler/BruvacAI_Space).)*
