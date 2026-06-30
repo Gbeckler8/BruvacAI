@@ -118,7 +118,7 @@ Most of the friction in this project came from library version drift and infrast
 
 ## License & Attribution
 
-This model is a fine-tuned derivative of [Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct) and is distributed under the terms of the [Llama 3.2 Community License Agreement](https://www.llama.com/llama3_2/license/). A copy of that license is included in this repository as `LICENSE-LLAMA.txt`.
+This model is a fine-tuned version of [Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct) and is distributed under the terms of the [Llama 3.2 Community License Agreement](https://www.llama.com/llama3_2/license/). A copy of that license is included in this repository as `LICENSE-LLAMA.txt`.
 
 > Llama 3.2 is licensed under the Llama 3.2 Community License, Copyright © Meta Platforms, Inc. All Rights Reserved.
 
