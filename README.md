@@ -4,7 +4,7 @@
 
 A LoRA fine-tuned LLM that generates Magic: The Gathering flavor text from card data — built on Llama-3.2-1B-Instruct and trained on 23K+ cards via Scryfall. Llama-BruvacAI learns the genre's distinctive voice — terse, evocative prose and quotes drawn from Magic's worldbuilding — and generates new flavor text. Named after Bruvac, the Grandiloquent — a fitting namesake for a model whose whole job is producing grandiloquent prose.
 
-🤗 **Model:** [Gbeckler/bruvac-ai](https://huggingface.co/Gbeckler/bruvac-ai)
+🤗 **Model:** [Gbeckler/Llama-bruvac-ai](https://huggingface.co/Gbeckler/bruvac-ai)
 
 🚀 **Live demo:** [Hugging Face Space](https://huggingface.co/spaces/Gbeckler/BruvacAI_Space)
 
